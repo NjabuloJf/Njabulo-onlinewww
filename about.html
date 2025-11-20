@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Njabulo Jb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet" />  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />  
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="/" class="logo-link">
+        <i class="fas fa-music"></i> Njabulo Jb
+      </a>
+    </div>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="                      
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="                              
+        <li><a href="#work">Work</a></li>
+        <li><a href="                                
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="status">
+      <div class="status-item">
+        <i class="fas fa-bolt"></i> 
+        <span id="battery">--%</span>
+      </div>
+      <div class="status-item">
+        <i class="fas fa-wifi"></i> 
+        <span id="ip">Loading...</span>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Njabulo Jb, a passionate individual with a love for music, technology, and creativity. I'm excited to share my journey and experiences with you.</p>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="your-image.jpg" alt="Njabulo Jb" />
+      </div>
+      <div class="about-text">
+        <h3>More About Me</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        <ul>
+          <li><strong>Age:</strong> 25</li>
+          <li><strong>Location:</strong> Gaborone, Botswana</li>
+          <li><strong>Interests:</strong> Music, coding, reading</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Battery API
+    navigator.getBattery().then(battery => {
+      const batteryPercentage = Math.round(battery.level * 100);
+      document.getElementById('battery').textContent = `${batteryPercentage}%`;
+    });
+
+    // IP API (using a third-party service)
+    fetch('https:                             
+      .then(response => response.json())
+      .then(data => document.getElementById('ip').textContent = data.ip);
+  </script>
+</body>
+</html>

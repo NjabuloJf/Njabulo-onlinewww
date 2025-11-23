@@ -1,339 +1,149 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  margin: 0;
-  padding: 0;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silva web</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* style.css */
+        @import url('https://use.fontawesome.com/releases/v6.5.2/css/all.css');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        
+        body {
+          background-color: #eee;
+          font-family: "Montserrat", sans-serif;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          overflow: hidden;
+          margin: 0;
+        }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+        .content {
+          width: 100%;
+          height: calc(100% - 60px);
+          position: absolute;
+          inset: 0;
+          background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWllemhnNWFpb2syZm55Y3U0d3A5OWVhYmd1M21pYWlqNGprdmlncSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT4uQF7h39mlsF5czK/giphy.gif');
+          background-position: center;
+          background-size: cover;
+          transition: .3s background ease-out;
+        }
 
-.page {
-  width: 8.5in;
-  height: 11in;
-  background-color: white;
-  border: 1px solid black;
-  padding: 1in;
-  box-sizing: border-box;
-}
+        nav {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          margin-top: -5px;
+          width: 100%;
+        }
 
-h1 {
-  text-align: center;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
+        ul {
+          background-color: #fff;
+          display: flex;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          height: 60px;
+        }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 20px;
-}
+        li {
+          color: #777;
+          cursor: pointer;
+          flex: 1;
+          padding: 10px;
+          text-align: center;
+          transition: none;
+        }
 
-th, td {
-  text-align: left;
-  padding: 8px;
-  border: 1px solid black;
-}
+        li p {
+          font-size: 12px;
+          margin: 2px 0;
+          transition: none;
+        }
 
-th {
-  background-color: #f2f2f2;
-}
+        li.active {
+          color: #c7b0c3;
+          font-weight: 900;
+        }
 
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
+        .section {
+          display: none;
+        }
 
-img {
-  width: 100px;
-  height: 100px;
-}
-
-.info-container {
-  margin-bottom: 20px;
-}
-
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.info-label {
-  font-weight: bold;
-}
-
-.info-value {
-  /* ... */
-}
-
-.key-grading-container {
-  margin-bottom: 20px;
-}
-
-.key-grading-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.key-grading-table th,
-.key-grading-table td {
-  text-align: left;
-  padding: 5px;
-  border: 1px solid black;
-}
-
-.key-grading-table th {
-  background-color: #f2f2f2;
-}
-
-.other-keys-container {
-  margin-bottom: 20px;
-}
-
-.other-keys-list {
-  list-style: none;
-  padding: 0;
-}
-
-.other-keys-list li {
-  margin-bottom: 5px;
-}
-
-.other-keys-list li span {
-  font-weight: bold;
-}
-
-.signature-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.signature-label {
-  font-weight: bold;
-}
-
-.signature-input {
-  width: 150px;
-  border-bottom: 1px solid black;
-  text-align: center;
-}
-
-.date-input {
-  width: 100px;
-  border-bottom: 1px solid black;
-  text-align: center;
-}
-</style>
+        .section.active {
+          display: block;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
-  <div class="page">
-    <h1>MASINDE MULIRO UNIVERSITY OF SCIENCE AND TECHNOLOGY</h1>
-    <div class="image-container">
-      <img src="./SEDU CLASS OF 2023-2027 20240826_080521.jpg" alt="MMUST Logo">
+  <div class="content">
+    <div class="section home active">
+      <h1>This Is Silva Tech</h1>
+        <h2>Home of technology </h2>
+      <p>silva tech provides a variety of AI tools and technology stuffs</p>
+
+          <p>Discover what makes us different from the rest! Welcome to our unique online community dedicated to Silva Tech enthusiasts.</p>
+          <p>Join us on this journey towards self-improvement! Welcome to our platform where we provide tools for personal growth.</p>
+
+          <p>Unlock endless opportunities with us! Welcome to our platform where innovation meets collaboration.</p>
     </div>
-    <div class="info-container">
-      <div class="info-row">
-        <span class="info-label">P.O. BOX:</span>
-        <span class="info-value">190-50100 KAKAMEGA,</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">TEL:</span>
-        <span class="info-value">+057-2505222/3,0702597360, FAX: +056-30153,</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">Email:</span>
-        <span class="info-value">info@mmust.ac.ke, web: www.mmust.ac.ke,</span>
-      </div>
+    <div class="section work">
+      <h1>Work</h1>
+      <p>Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet.</p>
     </div>
-    <h2>OFFICE OF THE REGISTRAR - ACADEMICS</h2>
-    <h3>Provisional Transcripts / Result Slip</h3>
-    <br>
-    <div class="info-container">
-      <div class="info-row">
-        <span class="info-label">STUDENT NAME:</span>
-        <span class="info-value">NAOMI AYIENDA BOSIBORI</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">PROGRAMME:</span>
-        <span class="info-value">BACHELOR OF EDUCATION (ARTS)</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">DEPARTMENT:</span>
-        <span class="info-value">EDUCATION ARTS</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">SCHOOL/FACULTY:</span>
-        <span class="info-value">SCHOOL OF EDUCATION(SEDU)</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">REG NO:</span>
-        <span class="info-value">EDA/B/01-01085/2023</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">ADMISSION YEAR:</span>
-        <span class="info-value">2023</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">YEAR OF STUDY:</span>
-        <span class="info-value">YEAR 1</span>
-      </div>
+    <div class="section blog">
+      <h1>How to Write a Blog Post: A Step-by-Step Guide</h1>
+      <p>If you’ve ever read a blog post, you’ve consumed content from a thought leader that is an expert in their industry. Chances are if the blog post was written effectively, you came away with helpful knowledge and a positive opinion about the writer or brand that produced the content.</p>
+      <p>Let's get started with an important question.</p>
+      <h2>What is a blog post?</h2>
+      <p>A blog post is any article, news piece, or guide that's published in the blog section of a website. A blog post typically covers a specific topic or query, is educational in nature, ranges from 600 to 2,000+ words, and contains other media types such as images, videos, infographics, and interactive charts.</p>
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th>UNIT CODE</th>
-          <th>UNIT TITLE</th>
-          <th>HOURS</th>
-          <th>GRADE</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>GEO 121</td>
-          <td>INTRODUCTION TO HUMAN AND ECONOMIC GEOGRAPHY</td>
-          <td>42</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>MMU 121</td>
-          <td>COMMUNICATION SKILLS</td>
-          <td>42</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>EPS 121</td>
-          <td>INTRODUCTION TO SPECIAL NEEDS EDUCATION</td>
-          <td>42</td>
-          <td>C</td>
-        </tr>
-        <tr>
-          <td>ESM 121</td>
-          <td>QUANTITIVE SKILLS II</td>
-          <td>42</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>ESM 111</td>
-          <td>QUANTITATIVE SKILLS 1</td>
-          <td>42</td>
-          <td>A</td>
-        </tr>
-        <tr>
-          <td>KIS 111</td>
-          <td>INTRODUCTION TO LAN-GUAGE AND LINGUISTICS IN KISWAHILI</td>
-          <td>42</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>EPM 111</td>
-          <td>INTRODUCTION TO TEACHER PROFESSIONAL DEVELOPMENT</td>
-          <td>42</td>
-          <td>C</td>
-        </tr>
-        <tr>
-          <td>ECO 112</td>
-          <td>INTRODUCTION TO MICROECONOMICS</td>
-          <td>42</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>GEO 111</td>
-          <td>THE EARTH'S PHYSICAL ENVI-RONMENTS</td>
-          <td>42</td>
-          <td>C</td>
-        </tr>
-        <tr>
-          <td>MMU 111</td>
-          <td>FUNDAMENTALS OF DIGITAL COMPETENCY</td>
-          <td>42</td>
-          <td>B</td>
-        </tr>
-        <tr>
-          <td>EDF 111</td>
-          <td>HISTORY OF EDUCATION</td>
-          <td>42</td>
-          <td>B</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="key-grading-container">
-      <h4>Key Grading System</h4>
-      <table class="key-grading-table">
-        <thead>
-          <tr>
-            <th>Grade Points</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>70-100</td>
-            <td>A</td>
-          </tr>
-          <tr>
-            <td>60-69</td>
-            <td>B</td>
-          </tr>
-          <tr>
-            <td>50-59</td>
-            <td>C</td>
-          </tr>
-          <tr>
-            <td>40-49</td>
-            <td>D</td>
-          </tr>
-          <tr>
-            <td>0-39</td>
-            <td>E</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="other-keys-container">
-      <h4>Other Keys</h4>
-      <ul class="other-keys-list">
-        <li><span>#</span> Symbol Names</li>
-        <li><span>*</span> Audited Unit</li>
-        <li><span>**</span> Supplementary</li>
-        <li><span>***</span> Retake</li>
-        <li><span>-</span> Missing Marks</li>
-        <li><span>CT</span> Credit Transfer</li>
-        <li><span>I</span> Incomplete</li>
-        <li><span>NA</span> Mark Type Not Applicable</li>
-      </ul>
-    </div>
-    <div class="signature-container">
-      <span class="signature-label">HOD:</span>
-      <input class="signature-input" type="text">
-      <span class="signature-label">Sign</span>
-      <input class="signature-input" type="text">
-      <span class="signature-label">Date</span>
-      <input class="date-input" type="text">
-    </div>
-    <div class="signature-container">
-      <span class="signature-label">Registrar:</span>
-      <input class="signature-input" type="text">
-      <span class="signature-label">Sign</span>
-      <input class="signature-input" type="text">
-      <span class="signature-label">Date</span>
-      <input class="date-input" type="text">
+    <div class="section about">
+      <h1>About Us</h1>
+      <p>Insert about us content here.</p>
     </div>
   </div>
+  <nav>
+    <ul>
+      <li class="active">
+        <i class="fa-solid fa-house"></i>
+        <p>Home</p>
+      </li>
+      <li>
+        <i class="fa-solid fa-box"></i>
+        <p>Work</p>
+      </li>
+      <li>
+        <i class="fa-solid fa-book-open"></i>
+        <p>Blog</p>
+      </li>
+      <li>
+        <i class="fa-solid fa-users"></i>
+        <p>About us</p>
+      </li>
+    </ul>
+  </nav>
 </div>
+
+<script>
+  const content = document.querySelector('.content');
+  const listItems = document.querySelectorAll('li');
+  const sections = document.querySelectorAll('.section');
+
+  listItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      listItems.forEach(item => item.classList.remove('active'));
+      item.classList.add('active');
+
+      sections.forEach(section => section.classList.remove('active'));
+      sections[index].classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>

@@ -543,37 +543,41 @@ button:hover {
     </div>  
   </main>  
 
-    <!-- CONTACT ICON -->
-    <div class="section about">
-      <h1>About Us</h1>
-      <p>Insert about us content here.</p>
-    </div>
-  </div>
-  <nav>
-    <ul>
-      <li class="active">
-        <i class="fa-solid fa-house"></i>
-        <p>Home</p>
-      </li>
-      <li>
-        <i class="fa-solid fa-box"></i>
-        <p>Work</p>
-      </li>
-      <li>
-        <i class="fa-solid fa-book-open"></i>
-        <p>Blog</p>
-      </li>
-      <li>
-        <i class="fa-solid fa-users"></i>
-        <p>About us</p>
-      </li>
-    </ul>
-  </nav>
-</div>
-</main>
+    
+<!-- HTML -->
+<nav> 
+  <div class="tool" onclick="redirectToPage('main.html')"> 
+    <i class="fa-solid fa-house"></i> 
+    <p>Home</p> 
+  </div> 
+  <div class="tool" onclick="redirectToPage('work.html')"> 
+    <i class="fa-solid fa-box"></i> 
+    <p>Work</p> 
+  </div> 
+  <div class="tool" onclick="redirectToPage('blog.html')"> 
+    <i class="fa-solid fa-book-open"></i> 
+    <p>Blog</p> 
+  </div> 
+  <div class="tool" onclick="redirectToPage('about.html')"> 
+    <i class="fa-solid fa-users"></i> 
+    <p>About us</p> 
+  </div> 
+  <div class="tool" onclick="redirectToPage('contact.html')"> 
+    <i class="fa-solid fa-envelope"></i> 
+    <p>Contact</p> 
+  </div> 
+</nav>
 
-  
-
+<!-- JavaScript -->
+<script>
+  function redirectToPage(page) {
+    if (page) {
+      window.location.href = page;
+    } else {
+      console.error("Invalid page");
+    }
+  }
+</script>
 
         
 

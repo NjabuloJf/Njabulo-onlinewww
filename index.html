@@ -393,6 +393,51 @@ button:hover {
   .progress {  
     width: 100%;  
   }  
+  
+  nav {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          margin-top: -5px;
+          width: 100%;
+        }
+
+        ul {
+          background-color: #fff;
+          display: flex;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          height: 60px;
+        }
+
+        li {
+          color: #777;
+          cursor: pointer;
+          flex: 1;
+          padding: 10px;
+          text-align: center;
+          transition: none;
+        }
+
+        li p {
+          font-size: 12px;
+          margin: 2px 0;
+          transition: none;
+        }
+
+        li.active {
+          color: #c7b0c3;
+          font-weight: 900;
+        }
+
+        .section {
+          display: none;
+        }
+
+        .section.active {
+          display: block;
+        }
     
   .controls {  
     width: 100%;  
@@ -499,7 +544,44 @@ button:hover {
   </main>  
 
 
-  
+    <div class="section work">
+      <h1>Work</h1>
+      <p>Anyone can connect with their audience through blogging and enjoy the myriad benefits that blogging provides: organic traffic from search engines, promotional content for social media, and recognition from a new audience you haven’t tapped into yet.</p>
+    </div>
+    <div class="section blog">
+      <h1>How to Write a Blog Post: A Step-by-Step Guide</h1>
+      <p>If you’ve ever read a blog post, you’ve consumed content from a thought leader that is an expert in their industry. Chances are if the blog post was written effectively, you came away with helpful knowledge and a positive opinion about the writer or brand that produced the content.</p>
+      <p>Let's get started with an important question.</p>
+      <h2>What is a blog post?</h2>
+      <p>A blog post is any article, news piece, or guide that's published in the blog section of a website. A blog post typically covers a specific topic or query, is educational in nature, ranges from 600 to 2,000+ words, and contains other media types such as images, videos, infographics, and interactive charts.</p>
+    </div>
+    <div class="section about">
+      <h1>About Us</h1>
+      <p>Insert about us content here.</p>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li class="active">
+        <i class="fa-solid fa-house"></i>
+        <p>Home</p>
+      </li>
+      <li>
+        <i class="fa-solid fa-box"></i>
+        <p>Work</p>
+      </li>
+      <li>
+        <i class="fa-solid fa-book-open"></i>
+        <p>Blog</p>
+      </li>
+      <li>
+        <i class="fa-solid fa-users"></i>
+        <p>About us</p>
+      </li>
+    </ul>
+  </nav>
+</div>
+
 
   
 

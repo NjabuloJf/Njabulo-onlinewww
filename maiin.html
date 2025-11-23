@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loading…</title>
+<style>
+  body{
+    margin:0;
+    background:linear-gradient(-45deg,#1e3c72,#2a5298,#ff6b6b,#4ecdc4);
+    background-size:400% 400%;
+    animation:bgShift 10s ease infinite;
+    color:#fff;
+    font-family:'Segoe UI',sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    overflow:hidden;
+  }
+  .loader,.welcome{
+    text-align:center;
+    transition:opacity .5s;
+  }
+  .spinner{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:linear-gradient(45deg,#ff6b6b,#4ecdc4,#45b7d1,#96ceb4,#feca57);
+    background-size:400% 400%;
+    animation:spin 2s linear infinite,gradient 3s ease-in-out infinite;
+    margin:0 auto 30px;
+    box-shadow:0 0 30px rgba(255,255,255,.3);
+  }
+  h1{
+    margin:0;
+    font-size:3rem;
+    letter-spacing:3px;
+    background:linear-gradient(45deg,#ff6b6b,#4ecdc4,#45b7d1,#96ceb4,#feca57);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-size:400% 400%;
+    animation:gradient 3s ease-in-out infinite;
+  }
+  .welcome h1{
+    font-size:4rem;
+    -webkit-text-fill-color:#fff;
+    animation:none;
+  }
+  .welcome p{
+    font-size:1.5rem;
+    margin:.5rem 0 0;
+    color:#eee;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  @keyframes bgShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+</style>
+</head>
+<body>
+<div class="loader">
+  <div class="spinner"></div>
+  <h1>Njabulo Jb</h1>
+</div>
+
+<div class="welcome" style="opacity:0;display:none;">
+  <h1>Welcome to Njabulo Jb King Tech</h1>
+  <p>for WhatsApp Bot</p>
+</div>
+
+<script>
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    const loader=document.querySelector('.loader');
+    const welcome=document.querySelector('.welcome');
+    loader.style.opacity='0';
+    welcome.style.opacity='1';
+    welcome.style.display='block';
+    setTimeout(()=>loader.style.display='none',500);
+  },30000); // 30 s loader
+});
+</script>
+</body>
+</html> 

@@ -923,71 +923,16 @@
             font-size: 16px;
         }
 
-                    /* Projeccts */
-        .projeccts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
 
-        .projecct-card {
-            background: rgba(10, 10, 10, 0.7);
-            border-radius: 5px;
-            overflow: hidden;
-            border: 1px solid var(--gray);
-            transition: transform 0.3s, border-color 0.3s;
-        }
 
-        .projecct-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-        }
+                /* Fullscreen preloader with progress bar */
+    #preloader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:var(--bg);z-index:9999}
+    #preloader h1{letter-spacing:2px;margin-bottom:18px}
+    .progress-wrap{width:70%;max-width:720px}
+    .progress{height:12px;background:var(--glass);border-radius:999px;overflow:hidden}
+    .progress > i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#7f7fff);transition:width 120ms linear}
+    .progress-label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-top:8px}
 
-        .projecct-img {
-            height: 200px;
-            background: var(--darker);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 3rem;
-        }
-
-        .projecct-content {
-            padding: 20px;
-        }
-
-        .projecct-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        .projecct-content p {
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-
-        .projecct-links {
-            display: flex;
-            gap: 10px;
-        }
-
-        .projecct-links a {
-            padding: 8px 15px;
-            background: transparent;
-            color: var(--primary);
-            border: 1px solid var(--primary);
-            text-decoration: none;
-            font-size: 0.8rem;
-            transition: all 0.3s;
-        }
-
-        .projecct-links a:hover {
-            background: var(--primary);
-            color: var(--dark);
-                }
             
             .video-gallery {
                 grid-template-columns: 1fr;
@@ -995,11 +940,12 @@
         }
     </style>
 </head>
-<body>
-    <div id="preloader">
-        <div class="loader-text">INITIALIZING SYSTEM...</div>
-        <div class="progress-bar">
-            <div class="progress" id="progress"></div>
+    <body>  <!-- particles background -->  <div id="particles-js" style="position:fixed;inset:0;z-index:0;opacity:0.45"></div>  <!-- PRELOADER -->  <div id="preloader">
+    <h1>ARNAB HACKER — LOADING</h1>
+    <div class="progress-wrap">
+      <div class="progress"><i id="progbar"></i></div>
+      <div class="progress-label"><span id="prog-text">0%</span><span id="prog-status">Initializing</span></div>
+
         </div>
     </div>
 

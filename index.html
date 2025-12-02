@@ -355,7 +355,7 @@
 
   <!-- CONTACT ICON -->
   <a href="https://timnasa.vercel.app/" class="contact-fab" title="Contact Us">
-    <i class="fas fa-headset"></i>
+    <i class="fas fa-robot"></i>
   </a>
   </main>
   <script>
@@ -426,7 +426,7 @@
                     results.forEach((songData, index) => {
                         if (songData && songData.status === 'success' && songData.data.length > 0) {
                             const song = songData.data[0];
-                            createSongCard(song, index * 100); // Stagger animations
+                            createSongCard(song, index * 10); // Stagger animations
                         }
                     });
                 });

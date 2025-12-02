@@ -308,7 +308,8 @@
         <div id="loading" class="loading">Loading tracks...</div>
         
         <div class="songs-grid" id="songsGrid"></div>
-        
+
+
         <footer>
             © 2025 All Rights Reserved - Njabulo Jb 
         </footer>
@@ -337,11 +338,11 @@
             setTimeout(changeBackgroundColor, 1000);
             
             // Fetch 4 random songs when page loads
-            fetchRandomSongs(10000000000);
+            fetchRandomSongs(50);
             
             // Add event listener to refresh button
             document.getElementById('refreshBtn').addEventListener('click', function() {
-                fetchRandomSongs(10000000000);
+                fetchRandomSongs(50);
             });
         });
         
@@ -522,7 +523,17 @@
                         progressText.textContent = `${percent}%`;
                     }
                 }
-                
+
+                               // WhatsApp Button
+        document.getElementById('whatsapp-btn').addEventListener('click', function() {
+            window.open('https://wa.me/26772592531?text=Hello%20NjabuloJb%20HACKER%20I%20need%20your%20help%20my%20name%20is%20___', '_blank');
+        });
+
+        // AI Assistant Button
+        document.getElementById('ai-btn').addEventListener('click', function() {
+            window.open('https://njabulojb-ai.vercel.app/', '_blank');
+        });
+
                 // Complete download
                 const blob = new Blob(chunks);
                 const downloadUrl = URL.createObjectURL(blob);

@@ -718,6 +718,45 @@
                     }
                 }
 
+                 // Update clock in title
+    const updateTime = () => {
+      const update = () => {
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
+        document.title = `TIMNASA_TMD | ${timeStr}`;
+      };
+      update();
+      setInterval(update, 1000);
+    }
+
+    // Battery status
+    const updateBattery = async () => {
+      if (navigator.getBattery) {
+        try {
+          const battery = await navigator.getBattery();
+          const setBattery = () => {
+            const batteryPercent = Math.round(battery.level * 100);
+            const batteryElement = document.getElementById('battery');
+            batteryElement.innerText = `${batteryPercent}%`;
+            
+            // Add battery icon based on level
+            let batteryIcon = 'fa-bolt';
+            if (batteryPercent <= 20) batteryIcon = 'fa-battery-quarter';
+            else if (batteryPercent <= 50) batteryIcon = 'fa-battery-half';
+            else if (batteryPercent <= 80) batteryIcon = 'fa-battery-three-quarters';
+            else if (batteryPercent <= 100) batteryIcon = 'fa-battery-full';
+            
+            batteryElement.previousElementSibling.className = `fas ${batteryIcon}`;
+          };
+          
+          battery.addEventListener('levelchange', setBattery);
+          battery.addEventListener('chargingchange', setBattery);
+          setBattery();
+        } catch (error) {
+          console.error('Battery API error:', error);
+        }
+      }
+            }
 
 
                 // Complete download

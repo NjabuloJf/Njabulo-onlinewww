@@ -938,15 +938,13 @@
             </div>
         </div>
 
-            
-
-
 
   <div class="floating-buttons">
     <button class="floating-btn whatsapp-btn" id="whatsapp-btn">
       <i class="fab fa-whatsapp"></i>
     </button>
     <button class="floating-btn ai-btn" id="ai-btn">
+      <i id="ai-btn">
       <i class="fas fa-robot"></i>
     </button>
     <button class="floating-btn video-btn" id="play-video-btn">
@@ -969,12 +967,13 @@
   <button id="close-video" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">×</button>
 </div>
 
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const videoModal = document.getElementById('video-modal');
     const bgVideo = document.getElementById('bg-video');
     const bgMusic = document.getElementById('bg-music');
-    const playVideoBtn = document.getElementById('play-video-btn = document.getElementById('play-video-btn');
+    const playVideoBtn = document.getElementById('play-video-btn');
     const playMusicBtn = document.getElementById('play-music-btn');
     const closeVideoBtn = document.getElementById('close-video');
     const whatsappBtn = document.getElementById('whatsapp-btn');
@@ -990,20 +989,28 @@
     });
 
     playVideoBtn.addEventListener('click', () => {
+      console.log('Video button clicked!');
       videoModal.style.display = 'flex';
-      bgVideo.play();
+      bgVideo.play().catch(e => console.error('Video play error:', e));
     });
 
     playMusicBtn.addEventListener('click', () => {
-      bgMusic.play();
+      console.log('Music button clicked!');
+      bgMusic.play().catch(e => console.error('Music play error:', e));
     });
 
     closeVideoBtn.addEventListener('click', () => {
       videoModal.style.display = 'none';
       bgVideo.pause();
     });
+
+    bgVideo.addEventListener('error', (e) => console.error('Video error:', e));
+    bgMusic.addEventListener('error', (e) => console.error('Music error:', e));
   });
 </script>
+
+
+
 
 
         
@@ -1197,6 +1204,7 @@
 </body>
 
 </html>
+
 
 
 

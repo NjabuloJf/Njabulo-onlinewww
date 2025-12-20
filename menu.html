@@ -780,6 +780,35 @@
             color: var(--dark);
         }
 
+                /* Gemini AI Button */
+        .gemini-ai-btn {
+            background: linear-gradient(135deg, #8e44ad, #3498db);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gemini-ai-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+                             }
+
+
+                .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+        }
+        
 
         @keyframes float {
             0% { transform: translateY(0) rotate(0deg); }
@@ -857,6 +886,13 @@
             </div>
         </div>
     </section>
+
+         <div class="user-actions" id="user-actions">
+                    <button class="gemini-ai-btn" onclick="window.open('https://gemini.google.com', '_blank')">
+                        <i class="fas fa-robot"></i> Try Gemini AI
+                        </div>
+        </div>
+</section>
 
     
 
@@ -1233,6 +1269,7 @@
 </body>
 
 </html>
+
 
 
 

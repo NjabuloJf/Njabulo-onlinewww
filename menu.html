@@ -852,7 +852,87 @@
 .download-btn:hover {
   background-color: #27ae60;
 }
-        
+
+
+                /* PLATFORMS GRID */
+        .platforms-section {
+            margin: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .platform-card {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 18px;
+            padding: 2rem;
+            border: 2px solid rgba(124, 58, 237, 0.2);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .platform-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.2);
+        }
+
+        .platform-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .heroku-icon { color: #6762A6; }
+        .railway-icon { color: #0B0D0E; }
+        .render-icon { color: #46E3B7; }
+        .koyeb-icon { color: #121212; }
+        .replit-icon { color: #667881; }
+
+        .platform-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .platform-desc {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .platform-features {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .platform-features li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .platform-features li i {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+                      
 
         @keyframes float {
             0% { transform: translateY(0) rotate(0deg); }
@@ -974,6 +1054,37 @@
     </div>
   </div>
 </section>
+
+    <div class="platforms-grid">
+                <!-- HEROKU -->
+                <div class="platform-card">
+                    <div class="platform-icon heroku-icon">
+                        <i class="fab fa-heroku"></i>
+                    </div>
+                    <h3 class="platform-title">Heroku</h3>
+                    <div class="status status-warning">
+                        <i class="fas fa-info-circle"></i> Free tier available
+                    </div>
+                    <p class="platform-desc">
+                        Popular platform with easy deployment. Free dynos available (sleep after 30 mins inactivity).
+                    </p>
+                    <ul class="platform-features">
+                        <li><i class="fas fa-check"></i> Free tier available</li>
+                        <li><i class="fas fa-check"></i> Auto-deploy from GitHub</li>
+                        <li><i class="fas fa-check"></i> PostgreSQL database</li>
+                        <li><i class="fas fa-check"></i> Easy scaling</li>
+                    </ul>
+                    <div style="display: flex; gap: 10px; margin-top: 1.5rem;">
+                        <button class="btn btn-secondary" onclick="showInstructions('heroku')">
+                            <i class="fas fa-book"></i> Instructions
+                        </button>
+                        <button class="btn btn-primary" onclick="deployTo('heroku')" disabled id="herokuBtn">
+                            <i class="fas fa-rocket"></i> Deploy Now
+                        </button>
+                    </div>
+                </div>
+
+
 
     <!-- Footer -->
     <footer>
@@ -1315,6 +1426,7 @@
 
 
 </html>
+
 
 
 
